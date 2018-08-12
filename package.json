@@ -1,0 +1,13 @@
+{
+  "name": "twish-server",
+  "version": "1.0.0",
+  "description": "Twitter Server Query",
+  "main": "index.js",
+  "repository": "https://github.com/zazk/Twish-Server",
+  "author": "Enrique Juan de Dios <juandedioz@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
+}
