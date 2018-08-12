@@ -7,5 +7,5 @@ module.exports.API = {
   strictSSL: true // optional - requires SSL certificates to be valid.
 };
 
-module.exports.PORT = 3000;
+module.exports.PORT = process.env.PORT || 3000;
 module.exports.MAX_RESULTS = 20;
