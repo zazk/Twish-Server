@@ -1,20 +1,14 @@
 const Twit = require('twit');
-const PORT = 3000;
-const MAX_RESULTS = 20;
+const { API, PORT, MAX_RESULTS } = require('./app.config');
 
-const T = new Twit({
-  consumer_key: process.env.API_KEY,
-  consumer_secret: process.env.API_SECRET_KEY,
-  access_token: process.env.ACCESS_TOKEN,
-  access_token_secret: process.env.ACCESS_TOKEN_SECRET,
-  timeout_ms: 60 * 1000, // optional HTTP request timeout to apply to all requests.
-  strictSSL: true // optional - requires SSL certificates to be valid.
-});
+// setup Twitter Client
+const T = new Twit(API);
 
 var express = require('express');
 var app = express();
 
-app.get('/hello/:term', function(req, res) {
+// get term
+app.get('/search/:term', function(req, res) {
   getTweets(req.params.term, res);
 });
 
