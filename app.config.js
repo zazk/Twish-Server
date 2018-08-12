@@ -8,4 +8,5 @@ module.exports.API = {
 };
 
 module.exports.PORT = process.env.PORT || 3000;
+module.exports.HOST = '0.0.0.0';
 module.exports.MAX_RESULTS = 20;
